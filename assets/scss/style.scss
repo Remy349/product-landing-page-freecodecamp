@@ -1,0 +1,247 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;700&display=swap');
+
+/* BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body { font-family: 'Heebo', sans-serif; }
+
+a { text-decoration: none; }
+
+ul { list-style: none; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CLASSES */
+.main { overflow-x: hidden; }
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section { padding: 7rem 0 2.5rem; }
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5rem;
+
+    &__logo {
+        &-img {
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    &-link {
+        color: #f76e11;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover {
+            color: #ff9f45;
+        }
+    }
+}
+
+/* HOME */
+.home {
+    height: 100vh;
+    background: linear-gradient(130deg, #f76e11 48%, #fff 120%);
+
+    &__content {
+        position: absolute;
+        top: 13rem;
+        color: #fff;
+
+        &-title {
+            font-size: 3rem;
+            color: #000;
+        }
+
+        &-subtitle { 
+            font-size: 2rem;
+            margin: 0 0 .5rem 0;
+        }
+
+        &-info {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        &-btns { margin-top: 2.5rem; }
+
+        &-btn {
+            background-color: #fff;
+            border-radius: 5rem;
+            display: flex;
+            align-items: center;
+            column-gap: .5rem;
+            font-size: 1.2rem;
+            width: 40%;
+            justify-content: center;
+            padding: .7rem 0;
+            color: #000;
+            box-shadow: 0 4px 20px rgba(0,0,0,.1);
+            transition: .5s;
+
+            &:hover {
+                color: #fff;
+                background-color: #ff9f45;
+            }
+        }
+
+        &-icon { font-size: 1.5rem; }
+    }
+
+    &__img {
+        position: absolute;
+        width: 25%;
+        right: 12rem;
+        top: 9rem;
+    }
+}
+
+/* VIDEO */
+.video {
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__title { font-size: 1.8rem; }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 1.1rem;
+    }
+
+    &__content {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+
+        & iframe {
+            width: 80%;
+            height: 400px;
+        }
+    }
+}
+
+/* PERSONALIZE */
+.personalize {
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__title { font-size: 1.8rem; }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 1.1rem;
+    }
+
+    &__content { margin-top: 3rem; }
+}
+
+/* FORM */
+.forms {
+    background-color: #f76e11;
+
+    &__title,
+    &__subtitle { text-align: center; }
+
+    &__title { font-size: 1.8rem; }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 1.1rem;
+        color: #fff;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    &__form {
+        background-color: #fff;
+        width: 60%;
+        padding: .7rem 0;
+        display: flex;
+        justify-content: center;
+        column-gap: .5rem;
+
+        &-input {
+            width: 70%;
+            padding: .7rem 0;
+            outline: none;
+            font-family: 'Heebo', sans-serif;
+            font-size: 1.1rem;
+            border: none;
+        }
+
+        &-btn {
+            width: 20%;
+            background-color: #f76e11;
+            bordeR: none;
+            outline: none;
+            color: #fff;
+            font-size: 1.1rem;
+            font-family: 'Heebo', sans-serif;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover { background-color: #ff9f45; }
+        }
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1000px) {
+    .container { max-width: 800px; }
+
+    .home {
+        &__content { top: 9rem; }
+
+        &__img {
+            width: 30%;
+            right: 6rem;
+            top: 13rem;
+        }
+    }
+}
